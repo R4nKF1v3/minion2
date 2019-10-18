@@ -9,3 +9,4 @@ signal game_over
 signal level_end
 signal next_level
 signal reset_level
+signal pause

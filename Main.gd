@@ -9,6 +9,7 @@ func _ready():
 	signals.connect("reset_level", self, "on_reset_level")
 	signals.connect("next_level", self, "on_next_level")
 	signals.connect("game_start", self, "on_game_start")
+	signals.connect("pause", self, "on_pause")
 	get_tree().paused = true
 
 func load_levels():
@@ -35,3 +36,6 @@ func on_game_over():
 
 func on_game_start():
 	get_tree().paused = false
+
+func on_pause():
+	get_tree().paused = true

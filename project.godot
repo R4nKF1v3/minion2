@@ -16,7 +16,18 @@ _global_script_class_icons={
 [application]
 
 config/name="Minion 2"
+run/main_scene="res://Main.tscn"
 config/icon="res://icon.png"
+
+[autoload]
+
+signals="*res://globals/signals.gd"
+
+[display]
+
+window/size/width=640
+window/size/height=640
+window/size/resizable=false
 
 [rendering]
 

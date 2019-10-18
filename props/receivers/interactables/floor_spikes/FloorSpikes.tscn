@@ -1,0 +1,18 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://props/receivers/interactables/Interactable.tscn" type="PackedScene" id=1]
+[ext_resource path="res://props/receivers/interactables/floor_spikes/FloorSpikes.gd" type="Script" id=2]
+[ext_resource path="res://props/receivers/interactables/floor_spikes/sprites/spikes_sheated.png" type="Texture" id=3]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 20, 20 )
+
+[node name="FloorSpikes" instance=ExtResource( 1 )]
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 3 )
+
+[node name="CollisionShape2D" parent="Area2D" index="0"]
+shape = SubResource( 1 )
+disabled = true

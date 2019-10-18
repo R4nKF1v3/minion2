@@ -2,9 +2,20 @@ extends "res://actors/pawn.gd"
 
 onready var Grid = get_parent()
 
+var target: Vector2
+
 func _ready():
+	set_physics_process(false)
 	update_look_direction(Vector2(1, 0))
 
+func _physics_process(delta):
+	if position.distance_to(target) > 4:
+		var direction = (target - position).normalized()
+		move_and_slide( direction * 256)
+	else:
+		position = target
+		set_physics_process(false)
+		set_process(true)
 
 func _process(_delta):
 	var input_direction = get_input_direction()
@@ -37,17 +48,9 @@ func update_look_direction(direction):
 
 func move_to(target_position):
 	set_process(false)
+	set_physics_process(true)
 	$AnimationPlayer.play("walk")
-
-	var move_direction = (target_position - position).normalized()
-	$Tween.interpolate_property(self, "position", position, target_position, $AnimationPlayer.current_animation_length, Tween.TRANS_LINEAR, Tween.EASE_IN)
-	$Tween.start()
-
-	# Stop the function execution until the animation finished
-	yield($AnimationPlayer, "animation_finished")
-	
-	set_process(true)
-
+	target = target_position
 
 func bump():
 	set_process(false)

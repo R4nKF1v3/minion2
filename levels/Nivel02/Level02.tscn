@@ -1,0 +1,70 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://levels/Level.tscn" type="PackedScene" id=1]
+[ext_resource path="res://props/receivers/interactables/floor_spikes/FloorSpikes.tscn" type="PackedScene" id=2]
+[ext_resource path="res://props/buttons/SequentialTrigger/SequentialTrigger.tscn" type="PackedScene" id=3]
+[ext_resource path="res://actors/box/Box.tscn" type="PackedScene" id=4]
+[ext_resource path="res://props/receivers/WallToggler/WallToggler.tscn" type="PackedScene" id=5]
+[ext_resource path="res://actors/player/Player.tscn" type="PackedScene" id=6]
+
+[node name="Level2" index="0" instance=ExtResource( 1 )]
+
+[node name="Ground" parent="." index="0"]
+tile_data = PoolIntArray( 65537, 0, 0, 65538, 0, 0, 65539, 0, 0, 65540, 0, 0, 65541, 0, 0, 65542, 0, 0, 65543, 0, 0, 65544, 0, 0, 131073, 0, 0, 131074, 0, 0, 131075, 0, 0, 131076, 0, 0, 131077, 0, 0, 131078, 0, 0, 131079, 0, 0, 131080, 0, 0, 196609, 0, 0, 196610, 0, 0, 196611, 0, 0, 196612, 0, 0, 196613, 0, 0, 196614, 0, 0, 196615, 0, 0, 196616, 0, 0, 262144, 0, 0, 262145, 0, 0, 262146, 0, 0, 262147, 0, 0, 262148, 0, 0, 262149, 0, 0, 262150, 0, 0, 262151, 0, 0, 262152, 0, 0, 327681, 0, 0, 327682, 0, 0, 327683, 0, 0, 327684, 0, 0, 327685, 0, 0, 327686, 0, 0, 327687, 0, 0, 327688, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0, 393223, 0, 0, 393224, 0, 0, 458752, 0, 0, 458753, 0, 0, 458754, 0, 0, 458755, 0, 0, 458756, 0, 0, 458757, 0, 0, 458758, 0, 0, 458759, 0, 0, 458760, 0, 0, 524289, 0, 0, 524290, 0, 0, 524291, 0, 0, 524292, 0, 0, 524293, 0, 0, 524294, 0, 0, 524295, 0, 0, 524296, 0, 0, 589831, 0, 0 )
+
+[node name="picos antes del trofeo" type="Node2D" parent="Props" index="0"]
+editor/display_folded = true
+
+[node name="FloorSpikes" parent="Props/picos antes del trofeo" index="0" instance=ExtResource( 2 )]
+position = Vector2( 545.263, 413.684 )
+id = 4
+
+[node name="FloorSpikes2" parent="Props/picos antes del trofeo" index="1" instance=ExtResource( 2 )]
+position = Vector2( 416.842, 544.21 )
+id = 3
+
+[node name="FloorSpikes3" parent="Props/picos antes del trofeo" index="2" instance=ExtResource( 2 )]
+position = Vector2( 415.79, 480 )
+id = 2
+
+[node name="FloorSpikes4" parent="Props/picos antes del trofeo" index="3" instance=ExtResource( 2 )]
+position = Vector2( 417.895, 415.789 )
+id = 1
+
+[node name="FloorSpikes5" parent="Props/picos antes del trofeo" index="4" instance=ExtResource( 2 )]
+position = Vector2( 484.211, 414.737 )
+
+[node name="SequentialTrigger" parent="Props/picos antes del trofeo" index="5" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 545.263, 412.632 )
+elements_ids = [ 3, 4, 0, 1, 2 ]
+toggle_ids = [ 1 ]
+
+[node name="Sprite" parent="Props/picos antes del trofeo/SequentialTrigger" index="0"]
+visible = false
+
+[node name="SequentialTrigger2" parent="Props/picos antes del trofeo" index="6" instance=ExtResource( 3 )]
+editor/display_folded = true
+position = Vector2( 416.842, 544.211 )
+elements_ids = [ 0, 4, 3, 2, 1 ]
+id = 1
+toggle_ids = [ 0 ]
+
+[node name="Sprite" parent="Props/picos antes del trofeo/SequentialTrigger2" index="0"]
+visible = false
+
+[node name="Box" parent="Props" index="1" instance=ExtResource( 4 )]
+position = Vector2( 224, 160 )
+
+[node name="WallToggler" parent="Props" index="2" instance=ExtResource( 5 )]
+position = Vector2( 351.579, 287.193 )
+
+[node name="Grid" parent="." index="2"]
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 65536, 1, 0, 65541, 1, 0, 65545, 1, 0, 131072, 1, 0, 131077, 1, 0, 131081, 1, 0, 196608, 1, 0, 196611, 1, 0, 196612, 1, 0, 196613, 1, 0, 196617, 1, 0, 262144, 1, 0, 262147, 1, 0, 262153, 1, 0, 327680, 1, 0, 327683, 1, 0, 327685, 1, 0, 327686, 1, 0, 327687, 1, 0, 327689, 1, 0, 393216, 1, 0, 393219, 1, 0, 393221, 1, 0, 393225, 1, 0, 458752, 1, 0, 458757, 1, 0, 458759, 1, 0, 458760, 1, 0, 458761, 1, 0, 524288, 1, 0, 524293, 1, 0, 524297, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0 )
+
+[node name="Player" parent="Grid" index="0" instance=ExtResource( 6 )]
+position = Vector2( 96.6, 100.4 )
+
+[editable path="Props/picos antes del trofeo/SequentialTrigger"]
+
+[editable path="Props/picos antes del trofeo/SequentialTrigger2"]

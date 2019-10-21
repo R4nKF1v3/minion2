@@ -14,7 +14,8 @@ func _ready():
 
 func load_levels():
 	levels.push_back(preload("res://levels/levelTest/LevelTest.tscn"))
-
+	levels.push_back(preload("res://levels/Nivel01/Level01.tscn"))
+	levels.push_back(preload("res://levels/Nivel02/Level02.tscn"))
 	levels.push_back(preload("res://levels/EndCard/EndCard.tscn"))
 	
 	current = levels.pop_front()

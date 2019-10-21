@@ -1,6 +1,6 @@
 extends "res://props/buttons/Button.gd"
 
-export(int) var delay_time = 1
+export(float) var delay_time = 1
 onready var timer = $Timer
 
 var holders = []

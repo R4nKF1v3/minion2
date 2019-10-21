@@ -1,6 +1,6 @@
 extends "res://props/progress/StageTrigger.gd"
 
-export(int) var speed = 3
+export(int) var speed = 30
 
 func _ready():
 	set_physics_process(false)

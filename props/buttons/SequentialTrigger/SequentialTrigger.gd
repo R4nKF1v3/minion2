@@ -2,7 +2,7 @@ extends "res://props/buttons/Button.gd"
 
 export(int) var id
 export(Array, int) var toggle_ids = []
-export(int) var delay_time = 1
+export(float) var delay_time = 1
 
 onready var timer = $Timer
 
@@ -41,6 +41,7 @@ func _on_toggle_lock(id_list):
 				timer.stop()
 				if not elements_ids.empty():
 					signals.emit_signal("disabled", [elements_ids[index]])
+					index=0
 			states.ENABLED:
 				state = states.TRIGGER
 

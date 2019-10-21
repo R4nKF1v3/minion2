@@ -57,3 +57,6 @@ func bump():
 	$AnimationPlayer.play("bump")
 	yield($AnimationPlayer, "animation_finished")
 	set_process(true)
+
+func handle_move_request(direction):
+	return false

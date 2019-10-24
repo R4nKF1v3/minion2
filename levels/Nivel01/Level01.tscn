@@ -8,7 +8,7 @@
 [ext_resource path="res://actors/player/Player.tscn" type="PackedScene" id=6]
 [ext_resource path="res://props/progress/WallOfFire/WallOfFire.tscn" type="PackedScene" id=7]
 
-[node name="Level01" index="0" instance=ExtResource( 1 )]
+[node name="Level01" instance=ExtResource( 1 )]
 
 [node name="Trophy" parent="Props" index="0" instance=ExtResource( 2 )]
 position = Vector2( 544, 544 )
@@ -18,348 +18,210 @@ position = Vector2( 96, 96 )
 
 [node name="Node2D" type="Node2D" parent="Props" index="2"]
 
-[node name="FloorSpikes" parent="Props/Node2D" index="0" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
-
-[node name="FloorSpikes2" parent="Props/Node2D" index="1" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
-
-[node name="FloorSpikes3" parent="Props/Node2D" index="2" instance=ExtResource( 4 )]
+[node name="FloorSpikes3" parent="Props/Node2D" index="0" instance=ExtResource( 4 )]
 position = Vector2( 96, 160 )
 id = 1
 
-[node name="FloorSpikes4" parent="Props/Node2D" index="3" instance=ExtResource( 4 )]
-position = Vector2( 160, 160 )
+[node name="FloorSpikes4" parent="Props/Node2D" index="1" instance=ExtResource( 4 )]
+position = Vector2( 160, 480 )
 id = 1
 
-[node name="FloorSpikes5" parent="Props/Node2D" index="4" instance=ExtResource( 4 )]
+[node name="FloorSpikes5" parent="Props/Node2D" index="2" instance=ExtResource( 4 )]
 position = Vector2( 96, 224 )
 id = 2
 
-[node name="FloorSpikes6" parent="Props/Node2D" index="5" instance=ExtResource( 4 )]
-position = Vector2( 160, 224 )
+[node name="FloorSpikes6" parent="Props/Node2D" index="3" instance=ExtResource( 4 )]
+position = Vector2( 160, 416 )
 id = 2
 
-[node name="FloorSpikes7" parent="Props/Node2D" index="6" instance=ExtResource( 4 )]
+[node name="FloorSpikes7" parent="Props/Node2D" index="4" instance=ExtResource( 4 )]
 position = Vector2( 96, 288 )
 id = 3
 
-[node name="FloorSpikes8" parent="Props/Node2D" index="7" instance=ExtResource( 4 )]
-position = Vector2( 160, 288 )
+[node name="FloorSpikes8" parent="Props/Node2D" index="5" instance=ExtResource( 4 )]
+position = Vector2( 160, 352 )
 id = 3
 
-[node name="FloorSpikes9" parent="Props/Node2D" index="8" instance=ExtResource( 4 )]
+[node name="FloorSpikes9" parent="Props/Node2D" index="6" instance=ExtResource( 4 )]
 position = Vector2( 96, 352 )
 id = 4
 
-[node name="FloorSpikes10" parent="Props/Node2D" index="9" instance=ExtResource( 4 )]
-position = Vector2( 160, 352 )
+[node name="FloorSpikes10" parent="Props/Node2D" index="7" instance=ExtResource( 4 )]
+position = Vector2( 160, 288 )
 id = 4
 
-[node name="FloorSpikes11" parent="Props/Node2D" index="10" instance=ExtResource( 4 )]
+[node name="FloorSpikes11" parent="Props/Node2D" index="8" instance=ExtResource( 4 )]
 position = Vector2( 96, 416 )
 id = 5
 
-[node name="FloorSpikes12" parent="Props/Node2D" index="11" instance=ExtResource( 4 )]
-position = Vector2( 160, 416 )
+[node name="FloorSpikes12" parent="Props/Node2D" index="9" instance=ExtResource( 4 )]
+position = Vector2( 160, 224 )
 id = 5
 
-[node name="FloorSpikes13" parent="Props/Node2D" index="12" instance=ExtResource( 4 )]
+[node name="FloorSpikes13" parent="Props/Node2D" index="10" instance=ExtResource( 4 )]
 position = Vector2( 96, 480 )
 id = 6
 
-[node name="FloorSpikes14" parent="Props/Node2D" index="13" instance=ExtResource( 4 )]
-position = Vector2( 160, 480 )
+[node name="FloorSpikes14" parent="Props/Node2D" index="11" instance=ExtResource( 4 )]
+position = Vector2( 160, 160 )
 id = 6
 
-[node name="SequentialTrigger" parent="Props/Node2D" index="14" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 96, 160 )
-elements_ids = [ 6, 0, 1, 2, 3, 4, 5 ]
+[node name="SequentialTrigger" parent="Props/Node2D" index="12" instance=ExtResource( 5 )]
+position = Vector2( 158.979, 97.4671 )
+elements_ids = [ 1, 2, 3, 4, 5, 6 ]
 toggle_ids = [ 1 ]
-delay_time = 0.4
+delay_time = 0.2
 
 [node name="Sprite" parent="Props/Node2D/SequentialTrigger" index="0"]
 visible = false
 
-[node name="SequentialTrigger2" parent="Props/Node2D" index="15" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 160 )
-elements_ids = [ 0, 1, 2, 3, 4, 5, 6 ]
-toggle_ids = [ 1 ]
-delay_time = 0.4
+[node name="Area2D" parent="Props/Node2D/SequentialTrigger" index="1"]
+position = Vector2( 0, 0.101227 )
 
-[node name="Sprite" parent="Props/Node2D/SequentialTrigger2" index="0"]
-visible = false
-
-[node name="SequentialTrigger3" parent="Props/Node2D" index="16" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 480 )
-elements_ids = [ 0, 6, 5, 4, 3, 2, 1 ]
-id = 1
-toggle_ids = [ 0 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D/SequentialTrigger3" index="0"]
-visible = false
-
-[node name="SequentialTrigger4" parent="Props/Node2D" index="17" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 96, 480 )
-elements_ids = [ 0, 6, 5, 4, 3, 2, 1 ]
-id = 1
-toggle_ids = [ 0 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D/SequentialTrigger4" index="0"]
-visible = false
+[node name="CollisionShape2D" parent="Props/Node2D/SequentialTrigger/Area2D" index="0"]
+position = Vector2( -0.00419617, -0.0739441 )
 
 [node name="Node2D2" type="Node2D" parent="Props" index="3"]
 position = Vector2( 192, 0 )
-__meta__ = {
-"_edit_group_": true
-}
 
 [node name="FloorSpikes" parent="Props/Node2D2" index="0" instance=ExtResource( 4 )]
 position = Vector2( 96, 160 )
-id = 7
-
-[node name="FloorSpikes2" parent="Props/Node2D2" index="1" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
-id = 7
-
-[node name="FloorSpikes3" parent="Props/Node2D2" index="2" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
 id = 8
 
-[node name="FloorSpikes4" parent="Props/Node2D2" index="3" instance=ExtResource( 4 )]
-position = Vector2( 160, 160 )
+[node name="FloorSpikes4" parent="Props/Node2D2" index="1" instance=ExtResource( 4 )]
+position = Vector2( 160, 480 )
 id = 8
 
-[node name="FloorSpikes5" parent="Props/Node2D2" index="4" instance=ExtResource( 4 )]
+[node name="FloorSpikes5" parent="Props/Node2D2" index="2" instance=ExtResource( 4 )]
 position = Vector2( 96, 224 )
 id = 9
 
-[node name="FloorSpikes6" parent="Props/Node2D2" index="5" instance=ExtResource( 4 )]
-position = Vector2( 160, 224 )
+[node name="FloorSpikes6" parent="Props/Node2D2" index="3" instance=ExtResource( 4 )]
+position = Vector2( 160, 416 )
 id = 9
 
-[node name="FloorSpikes7" parent="Props/Node2D2" index="6" instance=ExtResource( 4 )]
+[node name="FloorSpikes7" parent="Props/Node2D2" index="4" instance=ExtResource( 4 )]
 position = Vector2( 96, 288 )
 id = 10
 
-[node name="FloorSpikes8" parent="Props/Node2D2" index="7" instance=ExtResource( 4 )]
-position = Vector2( 160, 288 )
+[node name="FloorSpikes8" parent="Props/Node2D2" index="5" instance=ExtResource( 4 )]
+position = Vector2( 160, 352 )
 id = 10
 
-[node name="FloorSpikes9" parent="Props/Node2D2" index="8" instance=ExtResource( 4 )]
+[node name="FloorSpikes9" parent="Props/Node2D2" index="6" instance=ExtResource( 4 )]
 position = Vector2( 96, 352 )
 id = 11
 
-[node name="FloorSpikes10" parent="Props/Node2D2" index="9" instance=ExtResource( 4 )]
-position = Vector2( 160, 352 )
+[node name="FloorSpikes10" parent="Props/Node2D2" index="7" instance=ExtResource( 4 )]
+position = Vector2( 160, 288 )
 id = 11
 
-[node name="FloorSpikes11" parent="Props/Node2D2" index="10" instance=ExtResource( 4 )]
+[node name="FloorSpikes11" parent="Props/Node2D2" index="8" instance=ExtResource( 4 )]
 position = Vector2( 96, 416 )
 id = 12
 
-[node name="FloorSpikes12" parent="Props/Node2D2" index="11" instance=ExtResource( 4 )]
-position = Vector2( 160, 416 )
+[node name="FloorSpikes12" parent="Props/Node2D2" index="9" instance=ExtResource( 4 )]
+position = Vector2( 160, 224 )
 id = 12
 
-[node name="FloorSpikes13" parent="Props/Node2D2" index="12" instance=ExtResource( 4 )]
+[node name="FloorSpikes13" parent="Props/Node2D2" index="10" instance=ExtResource( 4 )]
 position = Vector2( 96, 480 )
 id = 13
 
-[node name="FloorSpikes14" parent="Props/Node2D2" index="13" instance=ExtResource( 4 )]
-position = Vector2( 160, 480 )
+[node name="FloorSpikes14" parent="Props/Node2D2" index="11" instance=ExtResource( 4 )]
+position = Vector2( 160, 160 )
 id = 13
 
-[node name="SequentialTrigger" parent="Props/Node2D2" index="14" instance=ExtResource( 5 )]
+[node name="SequentialTrigger" parent="Props/Node2D2" index="12" instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 96, 160 )
-elements_ids = [ 13, 7, 8, 9, 10, 11, 12 ]
+position = Vector2( -32.1299, 97.3748 )
+elements_ids = [ 10, 11, 12, 13, 8, 9 ]
 id = 2
 toggle_ids = [ 3 ]
-delay_time = 0.4
+delay_time = 0.2
 
 [node name="Sprite" parent="Props/Node2D2/SequentialTrigger" index="0"]
 visible = false
 
-[node name="SequentialTrigger2" parent="Props/Node2D2" index="15" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 160 )
-elements_ids = [ 13, 7, 8, 9, 10, 11, 12 ]
-id = 2
-toggle_ids = [ 3 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D2/SequentialTrigger2" index="0"]
-visible = false
-
-[node name="SequentialTrigger3" parent="Props/Node2D2" index="16" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 480 )
-elements_ids = [ 7, 13, 12, 11, 10, 9, 8 ]
-id = 3
-toggle_ids = [ 2 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D2/SequentialTrigger3" index="0"]
-visible = false
-
-[node name="SequentialTrigger4" parent="Props/Node2D2" index="17" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 96, 480 )
-elements_ids = [ 7, 13, 12, 11, 10, 9, 8 ]
-id = 3
-toggle_ids = [ 2 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D2/SequentialTrigger4" index="0"]
-visible = false
+[node name="CollisionShape2D" parent="Props/Node2D2/SequentialTrigger/Area2D" index="0"]
+position = Vector2( -0.0631409, -0.0786743 )
 
 [node name="Node2D3" type="Node2D" parent="Props" index="4"]
-position = Vector2( 384, 0 )
-__meta__ = {
-"_edit_group_": true
-}
+position = Vector2( 385.715, 0.857361 )
 
 [node name="FloorSpikes" parent="Props/Node2D3" index="0" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
+position = Vector2( 95.1426, 160 )
 id = 14
 
-[node name="FloorSpikes2" parent="Props/Node2D3" index="1" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
+[node name="FloorSpikes4" parent="Props/Node2D3" index="1" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 479.143 )
 id = 14
 
-[node name="FloorSpikes3" parent="Props/Node2D3" index="2" instance=ExtResource( 4 )]
-position = Vector2( 96, 160 )
-id = 15
-
-[node name="FloorSpikes4" parent="Props/Node2D3" index="3" instance=ExtResource( 4 )]
-position = Vector2( 160, 160 )
-id = 15
-
-[node name="FloorSpikes5" parent="Props/Node2D3" index="4" instance=ExtResource( 4 )]
+[node name="FloorSpikes5" parent="Props/Node2D3" index="2" instance=ExtResource( 4 )]
 position = Vector2( 96, 224 )
-id = 16
+id = 15
 
-[node name="FloorSpikes6" parent="Props/Node2D3" index="5" instance=ExtResource( 4 )]
-position = Vector2( 160, 224 )
-id = 16
+[node name="FloorSpikes6" parent="Props/Node2D3" index="3" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 415.143 )
+id = 15
 
-[node name="FloorSpikes7" parent="Props/Node2D3" index="6" instance=ExtResource( 4 )]
+[node name="FloorSpikes7" parent="Props/Node2D3" index="4" instance=ExtResource( 4 )]
 position = Vector2( 96, 288 )
-id = 17
+id = 16
 
-[node name="FloorSpikes8" parent="Props/Node2D3" index="7" instance=ExtResource( 4 )]
-position = Vector2( 160, 288 )
-id = 17
+[node name="FloorSpikes8" parent="Props/Node2D3" index="5" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 354.018 )
+id = 16
 
-[node name="FloorSpikes9" parent="Props/Node2D3" index="8" instance=ExtResource( 4 )]
+[node name="FloorSpikes9" parent="Props/Node2D3" index="6" instance=ExtResource( 4 )]
 position = Vector2( 96, 352 )
-id = 18
+id = 17
 
-[node name="FloorSpikes10" parent="Props/Node2D3" index="9" instance=ExtResource( 4 )]
-position = Vector2( 160, 352 )
-id = 18
+[node name="FloorSpikes10" parent="Props/Node2D3" index="7" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 288 )
+id = 17
 
-[node name="FloorSpikes11" parent="Props/Node2D3" index="10" instance=ExtResource( 4 )]
+[node name="FloorSpikes11" parent="Props/Node2D3" index="8" instance=ExtResource( 4 )]
 position = Vector2( 96, 416 )
-id = 19
+id = 18
 
-[node name="FloorSpikes12" parent="Props/Node2D3" index="11" instance=ExtResource( 4 )]
-position = Vector2( 160, 416 )
-id = 19
+[node name="FloorSpikes12" parent="Props/Node2D3" index="9" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 223.143 )
+id = 18
 
-[node name="FloorSpikes13" parent="Props/Node2D3" index="12" instance=ExtResource( 4 )]
+[node name="FloorSpikes13" parent="Props/Node2D3" index="10" instance=ExtResource( 4 )]
 position = Vector2( 96, 480 )
-id = 20
+id = 19
 
-[node name="FloorSpikes14" parent="Props/Node2D3" index="13" instance=ExtResource( 4 )]
-position = Vector2( 160, 480 )
-id = 20
+[node name="FloorSpikes14" parent="Props/Node2D3" index="11" instance=ExtResource( 4 )]
+position = Vector2( 158.285, 159.143 )
+id = 19
 
-[node name="SequentialTrigger" parent="Props/Node2D3" index="14" instance=ExtResource( 5 )]
+[node name="SequentialTrigger" parent="Props/Node2D3" index="12" instance=ExtResource( 5 )]
 editor/display_folded = true
-position = Vector2( 96, 160 )
-elements_ids = [ 20, 14, 15, 16, 17, 18, 19 ]
+position = Vector2( -226.373, 94.8395 )
+elements_ids = [ 18, 19, 14, 15, 16, 17 ]
 id = 4
-toggle_ids = [ 5 ]
-delay_time = 0.4
+delay_time = 0.2
 
 [node name="Sprite" parent="Props/Node2D3/SequentialTrigger" index="0"]
 visible = false
 
-[node name="SequentialTrigger2" parent="Props/Node2D3" index="15" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 160 )
-elements_ids = [ 20, 14, 15, 16, 17, 18, 19 ]
-id = 4
-toggle_ids = [ 5 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D3/SequentialTrigger2" index="0"]
-visible = false
-
-[node name="SequentialTrigger3" parent="Props/Node2D3" index="16" instance=ExtResource( 5 )]
-editor/display_folded = true
-position = Vector2( 160, 480 )
-elements_ids = [ 14, 20, 19, 18, 17, 16, 15 ]
-id = 5
-toggle_ids = [ 4 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D3/SequentialTrigger3" index="0"]
-visible = false
-
-[node name="SequentialTrigger4" parent="Props/Node2D3" index="17" instance=ExtResource( 5 )]
-position = Vector2( 96, 480 )
-elements_ids = [ 14, 20, 19, 18, 17, 16, 15 ]
-id = 5
-toggle_ids = [ 4 ]
-delay_time = 0.4
-
-[node name="Sprite" parent="Props/Node2D3/SequentialTrigger4" index="0"]
-visible = false
-
 [node name="Grid" parent="." index="2"]
-editor/display_folded = true
 tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 65536, 1, 0, 65539, 1, 0, 65545, 1, 0, 131072, 1, 0, 131075, 1, 0, 131078, 1, 0, 131081, 1, 0, 196608, 1, 0, 196611, 1, 0, 196614, 1, 0, 196617, 1, 0, 262144, 1, 0, 262147, 1, 0, 262150, 1, 0, 262153, 1, 0, 327680, 1, 0, 327683, 1, 0, 327686, 1, 0, 327689, 1, 0, 393216, 1, 0, 393219, 1, 0, 393222, 1, 0, 393225, 1, 0, 458752, 1, 0, 458755, 1, 0, 458758, 1, 0, 458761, 1, 0, 524288, 1, 0, 524294, 1, 0, 524297, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0 )
 
 [node name="Player" parent="Grid" index="0" instance=ExtResource( 6 )]
-position = Vector2( 160, 96 )
+position = Vector2( 167.513, 100.144 )
 
 [node name="AboveProps" parent="." index="3"]
-editor/display_folded = true
 position = Vector2( 0, 64 )
 
 [node name="WallOfFire" parent="AboveProps" index="0" instance=ExtResource( 7 )]
 position = Vector2( 704, -49 )
-speed = 60
+speed = 45
 
 [editable path="Props/Node2D/SequentialTrigger"]
 
-[editable path="Props/Node2D/SequentialTrigger2"]
-
-[editable path="Props/Node2D/SequentialTrigger3"]
-
-[editable path="Props/Node2D/SequentialTrigger4"]
-
 [editable path="Props/Node2D2/SequentialTrigger"]
 
-[editable path="Props/Node2D2/SequentialTrigger2"]
-
-[editable path="Props/Node2D2/SequentialTrigger3"]
-
-[editable path="Props/Node2D2/SequentialTrigger4"]
-
 [editable path="Props/Node2D3/SequentialTrigger"]
-
-[editable path="Props/Node2D3/SequentialTrigger2"]
-
-[editable path="Props/Node2D3/SequentialTrigger3"]
-
-[editable path="Props/Node2D3/SequentialTrigger4"]

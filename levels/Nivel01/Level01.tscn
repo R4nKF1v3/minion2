@@ -115,7 +115,6 @@ delay_time = 0.4
 visible = false
 
 [node name="Node2D2" type="Node2D" parent="Props" index="3"]
-editor/display_folded = true
 position = Vector2( 192, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -222,7 +221,6 @@ delay_time = 0.4
 visible = false
 
 [node name="Node2D3" type="Node2D" parent="Props" index="4"]
-editor/display_folded = true
 position = Vector2( 384, 0 )
 __meta__ = {
 "_edit_group_": true

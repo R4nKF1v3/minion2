@@ -6,7 +6,6 @@ export(float) var delay_time = 1
 
 onready var timer = $Timer
 
-var holders = []
 var index = 0
 
 enum states {ENABLED, LOCKED, TRIGGER}
@@ -18,23 +17,24 @@ func _ready():
 func _on_Area2D_body_entered(body):
 	match state:
 		states.ENABLED:
-			if holders.empty():
-				state = states.LOCKED
-				signals.emit_signal("toggle_lock", toggle_ids)
-				if not elements_ids.empty():
-					timer.start(delay_time)
-					signals.emit_signal("enabled", [elements_ids[index]])
+			state = states.LOCKED
+			signals.emit_signal("toggle_lock", id, toggle_ids)
+			if not elements_ids.empty():
+				timer.start(delay_time)
+				signals.emit_signal("enabled", [elements_ids[index]])
 		states.TRIGGER:
-			if holders.empty():
+			state = states.ENABLED
+			signals.emit_signal("toggle_lock", id, toggle_ids)
+
+
+func _on_toggle_lock(sender_id, id_list):
+	if sender_id == id:
+		match state:
+			states.ENABLED:
+				state = states.LOCKED
+			states.TRIGGER:
 				state = states.ENABLED
-				signals.emit_signal("toggle_lock", toggle_ids)
-	holders.push_back(body)
-
-func _on_Area2D_body_exited(body):
-	holders.remove(holders.find(body))
-
-func _on_toggle_lock(id_list):
-	if id_list.has(id):
+	elif id_list.has(id):
 		match state:
 			states.LOCKED:
 				state = states.ENABLED

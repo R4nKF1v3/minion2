@@ -18,17 +18,17 @@ func _on_Area2D_body_entered(body):
 	match state:
 		states.ENABLED:
 			state = states.LOCKED
-			signals.emit_signal("toggle_lock", id, toggle_ids)
+			signals.emit_signal("toggle_lock", self, toggle_ids)
 			if not elements_ids.empty():
 				timer.start(delay_time)
 				signals.emit_signal("enabled", [elements_ids[index]])
 		states.TRIGGER:
 			state = states.ENABLED
-			signals.emit_signal("toggle_lock", id, toggle_ids)
+			signals.emit_signal("toggle_lock", self, toggle_ids)
 
 
-func _on_toggle_lock(sender_id, id_list):
-	if sender_id == id:
+func _on_toggle_lock(sender, id_list):
+	if sender != self && sender.id == id:
 		match state:
 			states.ENABLED:
 				state = states.LOCKED

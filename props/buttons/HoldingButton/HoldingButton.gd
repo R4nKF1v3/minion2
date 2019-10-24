@@ -1,5 +1,7 @@
 extends "res://props/buttons/Button.gd"
 
+export(bool) var can_disable_on_exit = true
+
 var holders = []
 
 func _on_Area2D_body_entered(body):
@@ -9,5 +11,5 @@ func _on_Area2D_body_entered(body):
 
 func _on_Area2D_body_exited(body):
 	holders.remove(holders.find(body))
-	if holders.empty():
+	if can_disable_on_exit && holders.empty():
 		signals.emit_signal("disabled", elements_ids)

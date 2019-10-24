@@ -5,7 +5,7 @@
 [ext_resource path="res://props/receivers/interactables/floor_spikes/FloorSpikes.tscn" type="PackedScene" id=3]
 [ext_resource path="res://props/progress/EndLevel/EndLevel.tscn" type="PackedScene" id=4]
 [ext_resource path="res://props/buttons/HoldingButton/HoldingButton.tscn" type="PackedScene" id=5]
-[ext_resource path="res://props/buttons/HoldingButton/HoldingButtonForDisabling.gd" type="Script" id=6]
+[ext_resource path="res://props/buttons/DisablingButton/DisablingButton.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/player/Player.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/box/Box.tscn" type="PackedScene" id=8]
 [ext_resource path="res://props/receivers/WallToggler/WallToggler.tscn" type="PackedScene" id=9]
@@ -105,46 +105,43 @@ position = Vector2( 96.9266, 544 )
 position = Vector2( 544, 479.464 )
 elements_ids = [ 6, 11 ]
 
-[node name="Disabling" parent="Props" index="4" instance=ExtResource( 5 )]
-position = Vector2( 96.9266, 288 )
-script = ExtResource( 6 )
-elements_ids = [ 0 ]
-
-[node name="Disabling2" parent="Props" index="5" instance=ExtResource( 5 )]
-position = Vector2( 224.87, 544 )
-script = ExtResource( 6 )
-elements_ids = [ 11 ]
-
-[node name="HoldingButton4" parent="Props" index="6" instance=ExtResource( 5 )]
+[node name="HoldingButton4" parent="Props" index="4" instance=ExtResource( 5 )]
 position = Vector2( 544, 226.162 )
 elements_ids = [ 9 ]
 
-[node name="HoldingButton5" parent="Props" index="7" instance=ExtResource( 5 )]
+[node name="HoldingButton5" parent="Props" index="5" instance=ExtResource( 5 )]
 position = Vector2( 352, 544 )
 elements_ids = [ 2, 3, 4, 5, 7, 8, 1 ]
 
-[node name="HoldingButton6" parent="Props" index="8" instance=ExtResource( 5 )]
+[node name="HoldingButton6" parent="Props" index="6" instance=ExtResource( 5 )]
 position = Vector2( 544, 96 )
 elements_ids = [ 2, 3, 4, 5, 1, 7, 8, 10 ]
 
-[node name="HoldingButton7" parent="Props" index="9" instance=ExtResource( 5 )]
+[node name="HoldingButton7" parent="Props" index="7" instance=ExtResource( 5 )]
 position = Vector2( 96, 94.3419 )
 elements_ids = [ 6, 0 ]
 
-[node name="HoldingButton8" parent="Props" index="10" instance=ExtResource( 5 )]
+[node name="HoldingButton8" parent="Props" index="8" instance=ExtResource( 5 )]
 position = Vector2( 544, 348.936 )
 elements_ids = [ 0, 20 ]
 
-[node name="FloorSpikes" parent="Props" index="11" instance=ExtResource( 3 )]
+[node name="FloorSpikes" parent="Props" index="9" instance=ExtResource( 3 )]
 position = Vector2( 160, 96.9267 )
 id = 11
 
-[node name="FloorSpikes2" parent="Props" index="12" instance=ExtResource( 3 )]
+[node name="FloorSpikes2" parent="Props" index="10" instance=ExtResource( 3 )]
 position = Vector2( 161.544, 160 )
 id = 11
 
+[node name="DisablingButton" parent="Props" index="11" instance=ExtResource( 6 )]
+position = Vector2( 96, 288 )
+elements_ids = [ 0 ]
+
+[node name="DisablingButton2" parent="Props" index="12" instance=ExtResource( 6 )]
+position = Vector2( 224.87, 544 )
+elements_ids = [ 11 ]
+
 [node name="Grid" parent="." index="2"]
-editor/display_folded = true
 tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 7, 1, 0, 8, 1, 0, 9, 1, 0, 65536, 1, 0, 65545, 1, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131079, 1, 0, 131080, 1, 0, 131081, 1, 0, 196608, 1, 0, 196617, 1, 0, 262144, 1, 0, 262146, 1, 0, 262151, 1, 0, 262152, 1, 0, 262153, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327689, 1, 0, 393216, 1, 0, 393223, 1, 0, 393224, 1, 0, 393225, 1, 0, 458752, 1, 0, 458754, 1, 0, 458756, 1, 0, 458758, 1, 0, 458761, 1, 0, 524288, 1, 0, 524290, 1, 0, 524292, 1, 0, 524294, 1, 0, 524297, 1, 0, 589824, 1, 0, 589825, 1, 0, 589826, 1, 0, 589827, 1, 0, 589828, 1, 0, 589829, 1, 0, 589830, 1, 0, 589831, 1, 0, 589832, 1, 0, 589833, 1, 0 )
 
 [node name="Player" parent="Grid" index="0" instance=ExtResource( 7 )]
